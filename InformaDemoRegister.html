@@ -1,0 +1,33 @@
+<html>
+    <script src="https://informamarket-b2bstore-developer-edition.um8.force.com/InformaMarketsStore/lightning/lightning.out.js">
+
+    <div data-lightning-out="true"></div>    
+    </script>
+
+    <script>
+        const appName = "c:LightningOutInformaDemo";
+        const componentName = "c:loginDemoForm";
+        const lightningEndpoint = "https://informamarket-b2bstore-developer-edition.um8.force.com/InformaMarketsStore";
+        const targetElement = document.querySelector("[data-lightning-out]");
+        const componentAttributes = {
+
+        };
+
+        $Lightning.use(
+            appName,
+            function(){
+                $Lightning.createComponent(
+                    componentName,
+                    componentAttributes,
+                    targetElement,
+                    function(cmp){
+                        console.log("Lightning component created");
+
+                    }
+                );
+            },
+            lightningEndpoint
+        );
+
+    </script>
+</html>
